@@ -37,7 +37,9 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',  # Add your Gitpod URL here
+    'django-blog-olu-badero-126e326b3262.herokuapp.com',
 ]
+
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io'
