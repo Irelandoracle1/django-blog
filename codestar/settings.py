@@ -34,10 +34,14 @@ SECRET_KEY = 'django-insecure-%m7%4wv@gu2muj#x=laxvl0hr5k*9f)as@1hg3wq$&3@eyy$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = [
-    'localhost', '127.0.0.1', 'django-blog-olu-badero-126e326b3262.herokuapp.com',
-    '8000-irelandoracl-djangoblog-thwugouopxz.ws-eu117.gitpod.io'
+    'localhost',
+    '127.0.0.1',
+    '8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',  # Add your Gitpod URL here
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io'
+]
 
 
 
@@ -99,12 +103,12 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
