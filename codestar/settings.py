@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import sys
+from django.contrib.messages import constants as messages
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -19,6 +21,12 @@ if os.path.isfile('env.py'):
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 
@@ -31,10 +39,13 @@ SECRET_KEY = 'django-insecure-%m7%4wv@gu2muj#x=laxvl0hr5k*9f)as@1hg3wq$&3@eyy$'
 
 
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
+     '8000-nielmc-django-blog-tbkovgv7j0.us2.codeanyapp.com', 
+     '.herokuapp.com',
     '8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',
     '8080-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',  # If you still want to support this one
     'localhost',
@@ -47,8 +58,11 @@ ALLOWED_HOSTS = [
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io'
+    'https://8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com"
 ]
+
 
 
 
