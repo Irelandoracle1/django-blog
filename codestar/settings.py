@@ -38,6 +38,7 @@ ALLOWED_HOSTS = [
     '8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',
     '8080-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',  # If you still want to support this one
     'localhost',
+    'https://8080-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io'
     '127.0.0.1',
     # You can add other hostnames or IPs as needed
 ]
