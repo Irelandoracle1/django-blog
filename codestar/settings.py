@@ -33,12 +33,16 @@ SECRET_KEY = 'django-insecure-%m7%4wv@gu2muj#x=laxvl0hr5k*9f)as@1hg3wq$&3@eyy$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
 ALLOWED_HOSTS = [
+    '8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',
+    '8080-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',  # If you still want to support this one
     'localhost',
     '127.0.0.1',
-    '8000-irelandoracl-djangoblog-lx3w1pfa34p.ws-eu117.gitpod.io',  # Add your Gitpod URL here
-    'django-blog-olu-badero-126e326b3262.herokuapp.com',
+    # You can add other hostnames or IPs as needed
 ]
+
+
 
 
 CSRF_TRUSTED_ORIGINS = [
